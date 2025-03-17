@@ -24,13 +24,31 @@ fill in the form and hit predict to see the results in indian ruppes
 
 
 Deployment Instructions (Render)
-Push this code to a GitHub repository.
-Go to https://render.com and create an account or sign in.
-Click "New Web Service" and connect your GitHub repo.
-Set the build and start commands:
-Build Command: pip install -r requirements.txt
-Start Command: python app.py
-Deploy the app and get a public URL to share.
+Step 1: Sign In to Render
+Go to https://render.com and sign up or log in using your GitHub account.
+
+Step 2: Create a New Web Service
+Click "New +" → "Web Service"
+Select your GitHub repository that contains the uploaded Flask project.
+Step 3: Configure Your Service
+Settings:
+Name	:housing-price-predictor (or your choice)
+Environment	:Python
+Build Command	:pip install -r requirements.txt
+Start Command	:python app.py
+Branch	:main or master (whichever you uploaded to)
+
+Step 4: Deploy
+Click "Create Web Service" → Render will:
+
+Install dependencies
+Start the server
+Expose a public URL for your app (e.g., https://housing-price-predictor.onrender.com)
+
+Step 5: Test It Online
+Open the Render URL in your browser.
+You’ll see your HTML form.
+Submit data — it should return the predicted house price in ₹.
 
 
 Features
